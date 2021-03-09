@@ -20,8 +20,6 @@ class DetailView(generic.DetailView):
 class ResultsView(generic.DetailView):
     model = Question
     template_name = 'polls/results.html'
-    test = 'hey'
-
 
 def vote(request, question_id):
     """Creates a vote"""
