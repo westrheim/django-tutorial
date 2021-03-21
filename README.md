@@ -79,3 +79,16 @@ There are two generic views in Django that can be used (to remove unneccessary c
 * Same as before with the templates (defaults to `templates/<app>/<model>_list.html`)
 * Inside the template file, the model object context can be referenced to as `object_list`
 * If something else than the model is going to be used in the template (for instance data from a queryset), `context_object_name` needs to be specified
+
+## Testing
+Rules-of-thumb:
+* a separate TestClass for each model or view
+* a separate test method for each set of conditions you want to test
+* test method names that describe their function
+
+To run coverage report:
+```bash
+python -m pip install coverage
+coverage run --source='.' manage.py test polls
+coverage report
+```
